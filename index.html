@@ -63,25 +63,17 @@
         justify-content: center;
         margin-top: 10px;
         }
-        .card-container.experiencia {
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-        }
-        .card.experiencia {
-            max-width: 100%;
-            min-width: 0;
-        }
+        
         .card {
             border-left: 4px solid #3887be;
             background: #fff;
             box-shadow: 0 2px 8px #00000013;
             border-radius: 11px;
-            max-width: 370px;
-            min-width: 275px;
+            width: 100%;
             padding: 20px 24px;
-            flex: 1 1 320px;
             transition: box-shadow 0.18s;
+            display: block;              /* quita comportamiento flex interno */
+            height: auto;                /* deja que la altura dependa del contenido */
         }
         .card:hover {
             box-shadow: 0 4px 20px #528faa21;
@@ -107,6 +99,30 @@
             font-size: 1em;
         }
         @media (max-width:650px){ .card-container{flex-direction:column; align-items:center;} }
+        .card-container.experiencia {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            align-items: center;     /* centra las cards dentro de la sección */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .card.experiencia {
+            width: 100%;
+            max-width: 900px;        /* asegura que no se extienda fuera de los márgenes */
+            padding: 20px 24px;
+            margin: 0 auto;
+            border-left: 4px solid #3887be;
+            background: #fff;
+            border-radius: 11px;
+            box-shadow: 0 2px 8px #00000013;
+            height: auto;
+            transition: box-shadow 0.2s;
+            box-sizing: border-box;  /* incluye padding en el cálculo del ancho */
+        }
+        .card.experiencia:hover {
+            box-shadow: 0 4px 20px #528faa21;
+        }
         .lista-estudios {
             list-style-type: "● ";
             padding-left: 18px;
@@ -124,7 +140,7 @@
 <body>
     <header>
         <h1>Tomás García Gonzalo</h1>
-        <p>Profesional en Ingeniería Industrial enfocado en proyectos, datos y analítica</p>
+        <p>Ingeniero Civil Industrial enfocado en proyectos, datos y analítica</p>
     </header>
     <nav>
         <a href="#presentacion">Presentación</a>
