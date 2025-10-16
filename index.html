@@ -57,47 +57,68 @@
             main, header, nav, section { max-width: 97vw; padding: 7vw 4vw; }
         }
         .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    justify-content: center;
-    margin-top: 10px;
-}
-.card {
-    border-left: 4px solid #3887be;
-    background: #fff;
-    box-shadow: 0 2px 8px #00000013;
-    border-radius: 11px;
-    max-width: 370px;
-    min-width: 275px;
-    padding: 20px 24px;
-    flex: 1 1 320px;
-    transition: box-shadow 0.18s;
-}
-.card:hover {
-    box-shadow: 0 4px 20px #528faa21;
-}
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 7px;
-}
-.card-title {
-    font-size: 1.21em;
-    font-weight: 600;
-    color: #193651;
-}
-.card-period {
-    font-size: 1em;
-    color: #3887be;
-    font-weight: 500;
-}
-.card-desc {
-    color: #444;
-    font-size: 1em;
-}
-@media (max-width:650px){ .card-container{flex-direction:column; align-items:center;} }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        justify-content: center;
+        margin-top: 10px;
+        }
+        .card-container.experiencia {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+        .card.experiencia {
+            max-width: 100%;
+            min-width: 0;
+        }
+        .card {
+            border-left: 4px solid #3887be;
+            background: #fff;
+            box-shadow: 0 2px 8px #00000013;
+            border-radius: 11px;
+            max-width: 370px;
+            min-width: 275px;
+            padding: 20px 24px;
+            flex: 1 1 320px;
+            transition: box-shadow 0.18s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 20px #528faa21;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 7px;
+        }
+        .card-title {
+            font-size: 1.21em;
+            font-weight: 600;
+            color: #193651;
+        }
+        .card-period {
+            font-size: 1em;
+            color: #3887be;
+            font-weight: 500;
+        }
+        .card-desc {
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width:650px){ .card-container{flex-direction:column; align-items:center;} }
+        .lista-estudios {
+            list-style-type: "● ";
+            padding-left: 18px;
+            line-height: 1.8em;
+        }
+        .lista-estudios li b {
+            color: #193651;
+        }
+        .lista-estudios li {
+            margin-bottom: 6px;
+        }
+
     </style>
 </head>
 <body>
@@ -170,36 +191,36 @@
         </section>
         <section id="experiencia">
             <h2>Experiencia Profesional</h2>
-            <div class="card-container">
-                <div class="card">
+            <div class="card-container experiencia">
+                <div class="card experiencia">
                     <div class="card-header">
                         <span class="card-title">Jefe de Proyecto Mina la Placeta</span>
                         <span class="card-period">2024 - 2025</span>
                     </div>
                     <div class="card-desc">Gestión de proyecto en sector minero</div>
                 </div>
-                <div class="card">
+                <div class="card experiencia">
                     <div class="card-header">
                         <span class="card-title">Consultor en Rediseño de Procesos</span>
                         <span class="card-period">2021 - 2023</span>
                     </div>
                     <div class="card-desc">Optimización de procesos empresariales</div>
                 </div>
-                <div class="card">
+                <div class="card experiencia">
                     <div class="card-header">
                         <span class="card-title">Administrador de Contratos</span>
                         <span class="card-period">2020</span>
                     </div>
                     <div class="card-desc">Administración y control de contratos</div>
                 </div>
-                <div class="card">
+                <div class="card experiencia">
                     <div class="card-header">
                         <span class="card-title">Jefe de Proyecto - Planta de Áridos Villarrica</span>
                         <span class="card-period">2018 - 2019</span>
                     </div>
                     <div class="card-desc">Gestión de proyecto de construcción</div>
                 </div>
-                <div class="card">
+                <div class="card experiencia">
                     <div class="card-header">
                         <span class="card-title">Analista Inmobiliario</span>
                         <span class="card-period">2015 - 2017</span>
@@ -210,9 +231,12 @@
         </section>
         <section id="estudios">
             <h2>Formación y Cursos</h2>
-            <ul>
-                 <li><b>...</b> </li>
-                <li><b>...</b> </li>
+            <ul class="lista-estudios">
+                <li><b>Ingeniería Civil Industrial</b> — Universidad de Chile (2006 – 2017)</li>
+                <li><b>Certificado de Análisis Computacional de Datos de Google</b> — Coursera (2024)</li>
+                <li><b>Introduction to Quantum Computing</b> — Qubit by Qubit (2023)</li>
+                <li><b>Bootcamp JavaScript Fullstack Trainee</b> — Edutecno / Desafío Latam (2022)</li>
+            </ul>
         </section>
         <section id="contacto">
             <h2>Contacto</h2>
