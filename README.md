@@ -33,4 +33,4 @@ Mi objetivo es consolidar mi carrera en ingeniería de datos, aplicando mis cono
 
 ---
 
-Para más detalles o contacto, puedes conectarte conmigo vía LinkedIn.
+Para más detalles o contacto, puedes conectarte conmigo vía [LinkedIn](https://www.linkedin.com/in/tomas-garcia-gonzalo).
